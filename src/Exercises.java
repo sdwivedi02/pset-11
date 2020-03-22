@@ -135,6 +135,9 @@ public class Exercises {
 			}
 			list.set(i + 1, temp);
 		}
+    if (!ascending) {
+			Collections.reverse(list);
+		}
     return list;
   }
 
