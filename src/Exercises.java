@@ -254,6 +254,11 @@ public class Exercises {
 		}
     return list;
   }
+  private void combineHalves(ArrayList<Integer> left, ArrayList<Integer> right, ArrayList<Integer> complete) {
+		int leftIndex = 0;
+		int rightIndex = 0;
+		int completeArrayIndex = 0;
+
 
   public String[] merge(String[] list, boolean ascending) {
     return null;
