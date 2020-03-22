@@ -142,7 +142,20 @@ public class Exercises {
   }
 
   public String[] insertion(String[] list, boolean ascending) {
-    return null;
+    if (Arrays.asList(list).contains(null) || Arrays.asList(list) == null) {
+			return null;
+		}
+
+		for (int j = 1; j < list.length; j++) {
+			String current = list[j];
+			int i = j - 1;
+			while ((i > -1) && (list[i].compareTo(current) > 0)) {
+				list[i + 1] = list[i];
+				i--;
+			}
+			list[i + 1] = current;
+		}
+    return list;
   }
 
   public int[] selection(int[] list, boolean ascending) {
