@@ -155,6 +155,16 @@ public class Exercises {
 			}
 			list[i + 1] = current;
 		}
+    if (!ascending) {
+			int i;
+			String t;
+			int n = list.length;
+			for (i = 0; i < n / 2; i++) {
+				t = list[i];
+				list[i] = list[n - i - 1];
+				list[n - i - 1] = t;
+			}
+		}
     return list;
   }
 
