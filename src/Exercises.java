@@ -307,6 +307,16 @@ public class Exercises {
 			merge(right, true);
 			combine(list, left, right);
 		}
+    if (!ascending) {
+			int i;
+			String t;
+			int x = list.length;
+			for (i = 0; i < x / 2; i++) {
+				t = list[i];
+				list[i] = list[x - i - 1];
+				list[x - i - 1] = t;
+			}
+		}
     return list;
   }
 }
