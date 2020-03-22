@@ -249,6 +249,9 @@ public class Exercises {
 			right = merge(right, true);
 			combineHalves(left, right, list);
 		}
+    if (!ascending) {
+			Collections.reverse(list);
+		}
     return list;
   }
 
