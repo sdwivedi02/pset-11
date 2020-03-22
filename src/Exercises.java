@@ -319,4 +319,7 @@ public class Exercises {
 		}
     return list;
   }
+  private static void combine(String[] list, String[] left, String[] right) {
+		int a = 0;
+		int b = 0;
 }
