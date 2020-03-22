@@ -286,6 +286,27 @@ public class Exercises {
     	}
 
   public String[] merge(String[] list, boolean ascending) {
-    return null;
+    if (Arrays.asList(list).contains(null) || Arrays.asList(list) == null) {
+			String[] temp = new String[0];
+			return temp;
+		}
+
+		if (list.length >= 2) {
+			String[] left = new String[list.length / 2];
+			String[] right = new String[list.length - list.length / 2];
+
+			for (int i = 0; i < left.length; i++) {
+				left[i] = list[i];
+			}
+
+			for (int i = 0; i < right.length; i++) {
+				right[i] = list[i + list.length / 2];
+			}
+
+			merge(left, true);
+			merge(right, true);
+			combine(list, left, right);
+		}
+    return list;
   }
 }
