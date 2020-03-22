@@ -5,6 +5,15 @@ import java.util.Collections;
 public class Exercises {
 
   public int findMe(int[] list, int target) {
+    if (Arrays.asList(list).contains(null) || Arrays.asList(list) == null) {
+			return -1;
+		}
+
+		for (int i = 0; i < list.length; i++) {
+			if (list[i] == target) {
+				return i;
+			}
+		}
     return -1;
   }
 
