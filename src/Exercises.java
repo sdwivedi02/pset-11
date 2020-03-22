@@ -322,4 +322,14 @@ public class Exercises {
   private static void combine(String[] list, String[] left, String[] right) {
 		int a = 0;
 		int b = 0;
+    for (int i = 0; i < list.length; i++) {
+			if (b >= right.length || (a < left.length && left[a].compareToIgnoreCase(right[b]) < 0)) {
+				list[i] = left[a];
+				a++;
+			} else {
+				list[i] = right[b];
+				b++;
+			}
+		}
+	}
 }
