@@ -39,6 +39,18 @@ public class Exercises {
 		int high = list.size() - 1;
 		int index = -1;
 		while (low <= high) {
+      int mid = (low + high) / 2;
+			if (list.get(mid) < target) {
+				low = mid + 1;
+			} else if (list.get(mid) > target) {
+				high = mid - 1;
+			} else if (list.get(mid) == target) {
+				index = mid;
+				break;
+			}
+		}
+
+		return index;
   }
 
   public int findMeFaster(String[] list, String target) {
